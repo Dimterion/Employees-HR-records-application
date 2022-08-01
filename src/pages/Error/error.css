@@ -1,0 +1,18 @@
+.errorPage-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.errorPage-homePageLink {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.errorPage-homePageLink:hover {
+  box-shadow: 1px 1px 1px #000;
+}
