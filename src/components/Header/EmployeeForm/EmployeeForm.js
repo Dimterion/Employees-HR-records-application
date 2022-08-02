@@ -12,8 +12,8 @@ function EmployeeForm() {
     startDate: "",
     street: "",
     city: "",
-    state: null,
-    zipCode: 0,
+    state: "",
+    zipCode: "",
     department: "",
   };
 
@@ -52,6 +52,7 @@ function EmployeeForm() {
     e.preventDefault();
     setContextData([...contextData, formData]);
     setFormData(initialState);
+    console.log(formData);
   }
 
   return (
