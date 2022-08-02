@@ -131,7 +131,7 @@ function EmployeeForm() {
         name="department"
         onChange={inputChange}
         value={departmentsDropdown.filter((item) => {
-          return (item.value = formData.department);
+          return item.value === formData.department;
         })}
         options={departmentsDropdown}
       />
