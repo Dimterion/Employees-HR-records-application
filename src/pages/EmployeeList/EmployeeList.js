@@ -3,8 +3,8 @@ import "./employeeList.css";
 
 function EmployeeList() {
   return (
-    <div className="employeeListPage-container">
-      <h1>Current Employees</h1>
+    <div>
+      <div>Employee list content</div>
       <Link to="/">Home</Link>
     </div>
   );

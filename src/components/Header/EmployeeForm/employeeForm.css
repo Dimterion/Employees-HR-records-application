@@ -1,0 +1,7 @@
+.employeeForm-container {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: left;
+  margin: auto;
+  width: 200px;
+}
