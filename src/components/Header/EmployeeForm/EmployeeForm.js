@@ -8,7 +8,7 @@ function EmployeeForm() {
   const initialState = {
     firstName: "",
     lastName: "",
-    birthDate: "",
+    dateOfBirth: "",
     startDate: "",
     street: "",
     city: "",
@@ -73,13 +73,13 @@ function EmployeeForm() {
         onChange={inputChange}
         value={formData.lastName}
       />
-      <label htmlFor="birthDate">Date of Birth</label>
+      <label htmlFor="dateOfBirth">Date of Birth</label>
       <input
         type="date"
-        id="birthDate"
-        name="birthDate"
+        id="dateOfBirth"
+        name="dateOfBirth"
         onChange={inputChange}
-        value={formData.birthDate}
+        value={formData.dateOfBirth}
       />
       <label htmlFor="startDate">Start Date</label>
       <input
