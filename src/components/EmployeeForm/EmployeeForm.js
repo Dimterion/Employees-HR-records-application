@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { Context } from "../../../utils/Context";
+import { Context } from "../../utils/Context";
 import Select from "react-select";
 import "./employeeForm.css";
-import { states, departments } from "../../../assets/dropdownLists";
+import { states, departments } from "../../assets/dropdownLists";
 
 function EmployeeForm() {
   const initialState = {
@@ -23,7 +23,7 @@ function EmployeeForm() {
   const statesDropdown = states.map((state, index) => {
     return {
       label: state.name,
-      value: state.name,
+      value: state.abbreviation,
       name: "state",
       key: index,
     };

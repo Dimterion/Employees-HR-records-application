@@ -1,5 +1,5 @@
 import "./home.css";
-import EmployeeForm from "../../components/Header/EmployeeForm/EmployeeForm";
+import EmployeeForm from "../../components/EmployeeForm/EmployeeForm";
 
 function Home() {
   return <EmployeeForm />;
