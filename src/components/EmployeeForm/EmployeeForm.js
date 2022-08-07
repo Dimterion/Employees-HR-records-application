@@ -3,6 +3,7 @@ import { Context } from "../../utils/Context";
 import Select from "react-select";
 import "./employeeForm.css";
 import { states, departments } from "../../assets/dropdownLists";
+import ModalPlugin from "employee-hr-records-application-modal-plugin";
 
 function EmployeeForm() {
   const initialState = {
@@ -19,6 +20,7 @@ function EmployeeForm() {
 
   const [formData, setFormData] = useState(initialState);
   const { contextData, setContextData } = useContext(Context);
+  const [openModal, setOpenModal] = useState(false);
 
   const statesDropdown = states.map((state, index) => {
     return {
@@ -51,8 +53,8 @@ function EmployeeForm() {
   function createEmployee(e) {
     e.preventDefault();
     setContextData([...contextData, formData]);
+    setOpenModal(true);
     setFormData(initialState);
-    console.log(formData);
   }
 
   return (
@@ -139,6 +141,9 @@ function EmployeeForm() {
       <button type="submit" onClick={createEmployee}>
         Save
       </button>
+      {openModal && (
+        <ModalPlugin showModal={setOpenModal} modalText="Employee created!" />
+      )}
     </form>
   );
 }
