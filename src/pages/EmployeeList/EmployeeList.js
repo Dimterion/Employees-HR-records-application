@@ -7,6 +7,20 @@ import "react-data-table-component-extensions/dist/index.css";
 import { tableColumns } from "../../assets/tableData";
 
 function EmployeeList() {
+  const tableStyle = {
+    head: {
+      style: {
+        fontSize: "1rem",
+        fontWeight: "bold",
+      },
+    },
+    headCells: {
+      style: {
+        padding: "5px",
+      },
+    },
+  };
+
   return (
     <>
       <Context.Consumer>
@@ -17,8 +31,10 @@ function EmployeeList() {
             export={false}
             print={false}
             filterPlaceholder={"Search"}
+            filterDigit={0}
           >
             <DataTable
+              customStyles={tableStyle}
               columns={tableColumns}
               data={context.contextData}
               pagination

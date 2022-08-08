@@ -6,6 +6,19 @@ import { states, departments } from "../../assets/dropdownLists";
 import ModalPlugin from "employee-hr-records-application-modal-plugin";
 
 function EmployeeForm() {
+  const dropdownStyle = {
+    control: (base) => ({
+      ...base,
+      border: "1px solid #000",
+      boxShadow: "none",
+      cursor: "pointer",
+      "&:hover": {
+        border: "1px solid #000",
+        boxShadow: "1px 1px 1px #000",
+      },
+    }),
+  };
+
   const initialState = {
     firstName: "",
     lastName: "",
@@ -111,6 +124,7 @@ function EmployeeForm() {
         />
         <label htmlFor="state">State</label>
         <Select
+          styles={dropdownStyle}
           id="state"
           name="state"
           onChange={inputChange}
@@ -130,6 +144,7 @@ function EmployeeForm() {
       </fieldset>
       <label htmlFor="department">Department</label>
       <Select
+        styles={dropdownStyle}
         id="department"
         name="department"
         onChange={inputChange}
