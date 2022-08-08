@@ -1,4 +1,3 @@
-import "./home.css";
 import EmployeeForm from "../../components/EmployeeForm/EmployeeForm";
 
 function Home() {
