@@ -6,6 +6,7 @@ import { states, departments } from "../../assets/dropdownLists";
 import ModalPlugin from "employee-hr-records-application-modal-plugin";
 
 function EmployeeForm() {
+  // Additional styling variable for the form dropdown menus
   const dropdownStyle = {
     control: (base) => ({
       ...base,
@@ -19,6 +20,7 @@ function EmployeeForm() {
     }),
   };
 
+  // Setting the initial state of the form
   const initialState = {
     firstName: "",
     lastName: "",
@@ -31,10 +33,12 @@ function EmployeeForm() {
     department: "",
   };
 
+  // useState and useContext to manipulate the form data, context and opening/closing the modal
   const [formData, setFormData] = useState(initialState);
-  const { contextData, setContextData } = useContext(Context);
   const [openModal, setOpenModal] = useState(false);
+  const { contextData, setContextData } = useContext(Context);
 
+  // Mapping through the states array to store each one in the dropdown
   const statesDropdown = states.map((state, index) => {
     return {
       label: state.name,
@@ -44,6 +48,7 @@ function EmployeeForm() {
     };
   });
 
+  // Mapping through the departments array to store each one in the dropdown
   const departmentsDropdown = departments.map((department, index) => {
     return {
       label: department.name,
@@ -53,6 +58,7 @@ function EmployeeForm() {
     };
   });
 
+  // Function to handle the input changes of the form fields
   function inputChange(e) {
     const { name, value } = e.target || e;
     setFormData((prevFormData) => {
@@ -63,6 +69,7 @@ function EmployeeForm() {
     });
   }
 
+  // Function to handle the form submission
   function createEmployee(e) {
     e.preventDefault();
     setContextData([...contextData, formData]);
@@ -143,6 +150,7 @@ function EmployeeForm() {
         />
       </fieldset>
       <label htmlFor="department">Department</label>
+      {/* Using Select for the dropdown menus */}
       <Select
         styles={dropdownStyle}
         id="department"
@@ -156,6 +164,7 @@ function EmployeeForm() {
       <button type="submit" onClick={createEmployee}>
         Save
       </button>
+      {/* A separate personal plugin for the modal window is being displayed depending on the form submission */}
       {openModal && (
         <ModalPlugin showModal={setOpenModal} modalText="Employee created!" />
       )}

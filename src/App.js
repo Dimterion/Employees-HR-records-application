@@ -7,9 +7,11 @@ import Error from "./pages/Error/Error";
 import Header from "./components/Header/Header";
 
 function App() {
+  // Context, useState and useMemo for state management
   const [contextData, setContextData] = useState([]);
   const value = useMemo(() => ({ contextData, setContextData }), [contextData]);
 
+  // Wrapping the whole app in context for state management, Browser Router for creating the pages of the app, adding the header
   return (
     <Context.Provider value={value}>
       <BrowserRouter>

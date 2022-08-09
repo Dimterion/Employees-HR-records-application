@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 
 function Header() {
+  // Rendering the header depending on the page using useLocation
   const { pathname } = useLocation();
 
   if (pathname === "/") {

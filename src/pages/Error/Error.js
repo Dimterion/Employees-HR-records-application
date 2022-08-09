@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./error.css";
 
+// Simple error page for non-existed paths
 function Error() {
   return (
     <div className="errorPage-container">

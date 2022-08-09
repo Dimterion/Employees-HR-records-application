@@ -1,3 +1,4 @@
+// Storing all the form fields in a separate array
 const tableColumns = [
   {
     name: "First Name",

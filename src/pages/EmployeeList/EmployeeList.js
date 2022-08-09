@@ -5,7 +5,10 @@ import { Context } from "../../utils/Context";
 import "react-data-table-component-extensions/dist/index.css";
 import { tableColumns } from "../../assets/tableData";
 
+// Table with all the data after filling out the form
 function EmployeeList() {
+  
+  // Additional styling variable
   const tableStyle = {
     head: {
       style: {
@@ -20,6 +23,7 @@ function EmployeeList() {
     },
   };
 
+  // Using context, Data Table Extensions and Data Table to generate a table
   return (
     <>
       <Context.Consumer>

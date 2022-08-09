@@ -1,3 +1,4 @@
+// Storing the dropdown menus data in two separate arrays
 const states = [
   {
     name: "Alabama",
