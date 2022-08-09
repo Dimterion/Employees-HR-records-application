@@ -11,7 +11,7 @@ HTML, CSS, JavaScript, React, React Router, React Data Table Component.
 - Convert the code base of the previous version of the project to React. Initial repo can be found [here](https://github.com/OpenClassrooms-Student-Center/P12_Front-end)
 - Convert one of the four current jQuery plugins (Date picker, Modal window, Drop-down boxes or Data tables) from jQuery to React
 - Replace the remaining three jQuery plugins with React components
-- Perform Lighthouse performance tests comparing the old and the new app
+- Perform Lighthouse performance tests comparing the [old](https://github.com/Dimterion/Employees-HR-records-application/blob/master/lighthouse-performance-test-initial.json) and the [new](https://github.com/Dimterion/Employees-HR-records-application/blob/master/lighthouse-performance-test-refactored.json) app
 - Add a state management system instead of the local storage
 - Apply the appropriate styling
 
