@@ -2,6 +2,8 @@
 
 OpenClassrooms project
 
+[Live version deployed with Netlify](https://vocal-moxie-dc80c3.netlify.app/)
+
 ## Built with
 
 HTML, CSS, JavaScript, React, React Router, React Data Table Component.
