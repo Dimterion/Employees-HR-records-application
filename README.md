@@ -2,7 +2,9 @@
 
 OpenClassrooms project
 
-[Live version deployed with Netlify](https://vocal-moxie-dc80c3.netlify.app/)
+## Link to the app
+
+[HRnet - employees HR records application](https://vocal-moxie-dc80c3.netlify.app/)
 
 ## Built with
 
@@ -36,10 +38,14 @@ The repo for the plugin is [here](https://github.com/Dimterion/Employee-HR-recor
 2. Clone the repo onto your computer
 3. Open the terminal and run the following commands:
 
-```bash
-# Install dependencies
-npm install
+### Install dependencies
 
-# Launch the application
+```bash
+npm install
+```
+
+### Launch the application
+
+```bash
 npm start
 ```
